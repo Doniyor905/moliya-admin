@@ -1,0 +1,160 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    &__barmenu {
+        width: 30px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+
+        span {
+            width: 100%;
+            height: 3px;
+            background-color: #1A4570;
+            top: -9;
+            left: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18%;
+
+
+            &::before,
+            &::after {
+                content: "";
+                width: 100%;
+                height: 3px;
+                background-color: #1A4570;
+                border-radius: 10%;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 16px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 8px;
+            }
+        }
+    }
+
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        &-bar {
+            font-size: 25px;
+            color: #1A4570;
+            cursor: pointer;
+        }
+    }
+
+    &__settings {
+        position: relative;
+
+        &-dropdown {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 160px;
+            background-color: #fff;
+            opacity: 0;
+            transition: 0.2s;
+            z-index: -999;
+            pointer-events: none;
+            border-radius: 4px;
+            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+
+
+            &.active {
+                top: 70px;
+                opacity: 1;
+                z-index: 99;
+                pointer-events: all;
+
+            }
+
+            &-name {
+                font-size: 16px;
+                color: #1A4570;
+                text-align: center;
+                margin-bottom: 5px;
+                margin-top: 10px;
+            }
+
+            &-role {
+                font-size: 14px;
+                color: #1A4570;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+            p {
+                font-weight: 500;
+                color: #1A4570;
+            }
+
+            &-arrow {
+                color: #1A4570;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                a {
+                    text-decoration: none;
+                    width: 100%;
+                    display: block;
+                    height: 50px;
+                    border-top: 1px solid #E3E3E3;
+                    border-bottom: 1px solid #E3E3E3;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    padding-left: 20px;
+                    color: #1A4570;
+                    transition: .5s;
+
+                    &:hover {
+                        background-color: #efefef;
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+}

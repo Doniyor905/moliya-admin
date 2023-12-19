@@ -1,0 +1,30 @@
+.home {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    height: 100vh;
+    &__title {
+        font-size: 35px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        color: #1A4570;
+    }
+
+    &__inner {
+        text-align: center;
+        p {
+            margin-top: 5px;
+        }
+        p a {
+            font-weight: 700;
+            color: #1A4570;
+            text-decoration: none;
+        }
+
+        p span {
+            font-weight: 700;
+            color: #1A4570;
+
+        }
+    }
+}
